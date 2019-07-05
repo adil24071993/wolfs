@@ -1,0 +1,45 @@
+<div class="signup-wrapper">
+    <div class="fields-container">
+        <div class="fields">
+            <div class="padding-10 signup-text">Sign Up</div>
+        
+            <div class="mobile-number-field">
+                <mat-form-field appearance="outline">
+                <mat-label>Mobile Number</mat-label>
+                <input matInput placeholder="Mobile Number">
+                <mat-icon matSuffix>phone</mat-icon>
+                </mat-form-field>
+            </div>
+
+            <div class="name-field">
+                <mat-form-field appearance="outline">
+                <mat-label>Username</mat-label>
+                <input matInput placeholder="Username">
+                <mat-icon matSuffix>perm_identity</mat-icon>
+                </mat-form-field>
+            </div>
+        
+            <div class="password-field">
+                <mat-form-field appearance="outline">
+                <input matInput placeholder="Password" [type]="hidePass ? 'password' : 'text'">
+                <button mat-icon-button matSuffix (click)="hidePass = !hidePass" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                <mat-icon>{{hidePass ? 'visibility_off' : 'visibility'}}</mat-icon>
+                </button>
+                </mat-form-field>
+            </div>
+
+            <div class="confirm-password-field">
+                <mat-form-field appearance="outline">
+                <input matInput placeholder="Confirm password" [type]="hideConfirmPass ? 'password' : 'text'">
+                <button mat-icon-button matSuffix (click)="hideConfirmPass = !hideConfirmPass" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                <mat-icon>{{hideConfirmPass ? 'visibility_off' : 'visibility'}}</mat-icon>
+                </button>
+                </mat-form-field>
+            </div>
+            
+            <div class="signup-button">
+                <button mat-raised-button color="primary">Sign Up</button>
+            </div>
+        </div>
+    </div>
+</div>
